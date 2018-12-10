@@ -1,6 +1,6 @@
-```
-STATUS:
-diff
+
+STATUS
+```diff
 + Completed
 ```
 
