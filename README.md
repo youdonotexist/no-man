@@ -1,4 +1,7 @@
-STATUS: Completed
+```
+STATUS:
++ Completed
+```
 
 Dev OS - OS X 
 Engine - Torque Game Builder 
