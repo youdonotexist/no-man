@@ -1,0 +1,48 @@
+//--- OBJECT WRITE BEGIN ---
+%guiContent = new GuiControl(mainScreenGui) {
+   canSaveDynamicFields = "0";
+   isContainer = "1";
+   Profile = "GuiBlackContentProfile";
+   HorizSizing = "width";
+   VertSizing = "height";
+   Position = "0 0";
+   Extent = "1024 768";
+   MinExtent = "8 8";
+   canSave = "1";
+   Visible = "1";
+   hovertime = "1000";
+
+   new t2dSceneWindow(sceneWindow2D) {
+      canSaveDynamicFields = "0";
+      isContainer = "0";
+      Profile = "GuiText24Profile";
+      HorizSizing = "width";
+      VertSizing = "height";
+      Position = "0 0";
+      Extent = "1024 768";
+      MinExtent = "8 8";
+      canSave = "1";
+      Visible = "1";
+      tooltipprofile = "GuiDefaultProfile";
+      hovertime = "1000";
+      lockMouse = "0";
+      useWindowMouseEvents = "0";
+      useObjectMouseEvents = "0";
+   };
+   
+   new GuiMouseEventCtrl(MouseInputCtrl) {
+      canSaveDynamicFields = "0";
+      isContainer = "0";
+      Profile = "GuiTransparentProfile";
+      HorizSizing = "width";
+      VertSizing = "height";
+      Position = "0 0";
+      Extent = "1024 768";
+      MinExtent = "8 8";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      lockMouse = "0";
+   };
+};
+//--- OBJECT WRITE END ---

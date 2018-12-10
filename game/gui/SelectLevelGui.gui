@@ -1,0 +1,168 @@
+//--- OBJECT WRITE BEGIN ---
+%guiContent = new GuiControl(SelectLevelGui) {
+   canSaveDynamicFields = "0";
+   isContainer = "1";
+   Profile = "GuiDefaultProfile";
+   HorizSizing = "right";
+   VertSizing = "bottom";
+   Position = "0 0";
+   Extent = "800 600";
+   MinExtent = "8 2";
+   canSave = "1";
+   Visible = "1";
+   hovertime = "1000";
+
+   new GuiWindowCtrl() {
+      canSaveDynamicFields = "0";
+      isContainer = "1";
+      Profile = "MenuWindowProfile";
+      HorizSizing = "center";
+      VertSizing = "center";
+      Position = "270 150";
+      Extent = "260 300";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      text = "Select Level";
+      maxLength = "1024";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "0";
+      canClose = "0";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+
+      new GuiScrollCtrl() {
+         canSaveDynamicFields = "0";
+         isContainer = "1";
+         Profile = "GuiScrollProfile";
+         HorizSizing = "right";
+         VertSizing = "bottom";
+         Position = "8 28";
+         Extent = "245 230";
+         MinExtent = "8 2";
+         canSave = "1";
+         Visible = "1";
+         hovertime = "1000";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "dynamic";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiListBoxCtrl(SelectLevelListBox) {
+            canSaveDynamicFields = "0";
+            isContainer = "0";
+            Profile = "GuiListBoxProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "2 2";
+            Extent = "241 2";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            hovertime = "1000";
+            AllowMultipleSelections = "0";
+            fitParentWidth = "1";
+         };
+      };
+      new GuiButtonCtrl() {
+         canSaveDynamicFields = "0";
+         isContainer = "0";
+         Profile = "GuiButtonProfile";
+         HorizSizing = "right";
+         VertSizing = "bottom";
+         Position = "8 263";
+         Extent = "120 30";
+         MinExtent = "8 2";
+         canSave = "1";
+         Visible = "1";
+         Command = "SelectLevelGui.selectLevel();";
+         hovertime = "1000";
+         text = "Select Level";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         useMouseEvents = "0";
+      };
+      new GuiButtonCtrl() {
+         canSaveDynamicFields = "0";
+         isContainer = "0";
+         Profile = "GuiButtonProfile";
+         HorizSizing = "right";
+         VertSizing = "bottom";
+         Position = "133 263";
+         Extent = "120 30";
+         MinExtent = "8 2";
+         canSave = "1";
+         Visible = "1";
+         Command = "Canvas.popDialog(SelectLevelGui);";
+         hovertime = "1000";
+         text = "Cancel";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         useMouseEvents = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function SelectLevelGui::onWake(%this)
+{
+	SelectLevelListBox.clearItems();
+	
+	%xmlFile = new ScriptObject()
+	{
+		class = "XML";
+	};
+	
+	// Grab the level folder
+	%levelDirectory = _getPreference("LevelFolder");
+	%levelSpec      = %levelDirectory @ "/*.t2d";
+	
+	%levelIndex = 0;
+	for (%levelFile = findFirstFile(%levelSpec); isFile(%levelFile); %levelFile = findNextFile(%levelSpec))
+	{
+		// Skip levels without a config file
+		%configFile = %levelDirectory @ "/" @ fileBase(%levelFile) @ ".xml";
+		if (!isFile(%configFile))
+			continue;
+		
+		// Read the file
+		if( %xmlFile.beginRead( %configFile ) )
+		{
+			// Load the configuration
+			if( %xmlFile.readClassBegin( "LevelConfiguration" ) )
+			{
+				%levelName = %xmlFile.readField( "Name" );
+				%xmlFile.readClassEnd();
+			}
+			
+			// Close off the stream
+			%xmlFile.endRead();
+		}
+		
+		$NetworkLobby::LevelNames[%levelIndex] = fileBase(%levelFile);
+		SelectLevelListBox.addItem(%levelName);
+
+		%levelIndex += 1;
+	}
+		
+	SelectLevelListBox.setSelected(0);
+}
+
+function SelectLevelListBox::onDoubleClick()
+{
+	// Run the select level script
+	SelectLevelGui.selectLevel();
+}
+
+function SelectLevelGui::selectLevel()
+{
+	// Find the file and notify the server of the change
+	%selectedLevel = $NetworkLobby::LevelNames[SelectLevelListBox.getSelectedItem()];
+	commandToServer('NetworkLobbyLevelChange', %selectedLevel);
+	
+	Canvas.popDialog(SelectLevelGui);
+}

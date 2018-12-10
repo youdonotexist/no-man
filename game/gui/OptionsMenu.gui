@@ -1,0 +1,824 @@
+//--- OBJECT WRITE BEGIN ---
+%guiContent = new GuiControl(OptionsMenuGui) {
+   canSaveDynamicFields = "0";
+   isContainer = "1";
+   Profile = "GuiDefaultProfile";
+   HorizSizing = "right";
+   VertSizing = "bottom";
+   Position = "0 0";
+   Extent = "800 600";
+   MinExtent = "8 2";
+   canSave = "1";
+   Visible = "1";
+   hovertime = "1000";
+
+   new GuiWindowCtrl() {
+      canSaveDynamicFields = "0";
+      isContainer = "1";
+      Profile = "MenuWindowProfile";
+      HorizSizing = "center";
+      VertSizing = "center";
+      Position = "240 153";
+      Extent = "320 325";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      maxLength = "1024";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "0";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "Canvas.popDialog(OptionsMenuGui);";
+
+      new GuiButtonCtrl() {
+         canSaveDynamicFields = "0";
+         isContainer = "0";
+         Profile = "GuiButtonProfile";
+         HorizSizing = "right";
+         VertSizing = "bottom";
+         Position = "171 285";
+         Extent = "136 30";
+         MinExtent = "8 2";
+         canSave = "1";
+         Visible = "1";
+         Command = "OptionsMenuGui.cancelChanges();";
+         hovertime = "1000";
+         text = "Cancel";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         useMouseEvents = "0";
+      };
+      new GuiButtonCtrl() {
+         canSaveDynamicFields = "0";
+         isContainer = "0";
+         Profile = "GuiButtonProfile";
+         HorizSizing = "right";
+         VertSizing = "bottom";
+         Position = "32 285";
+         Extent = "136 30";
+         MinExtent = "8 2";
+         canSave = "1";
+         Visible = "1";
+         Command = "OptionsMenuGui.saveSettings();";
+         hovertime = "1000";
+         text = "Save";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         useMouseEvents = "0";
+      };
+      new GuiTabBookCtrl(OptionsMenuTabBook) {
+         canSaveDynamicFields = "0";
+         isContainer = "1";
+         Profile = "MenuTabBookProfile";
+         HorizSizing = "width";
+         VertSizing = "height";
+         Position = "32 9";
+         Extent = "275 270";
+         MinExtent = "8 2";
+         canSave = "1";
+         Visible = "1";
+         tooltipprofile = "GuiDefaultProfile";
+         hovertime = "1000";
+         TabPosition = "Top";
+         TabHeight = "24";
+         TabMargin = "7";
+         MinTabWidth = "64";
+
+         new GuiTabPageCtrl() {
+            canSaveDynamicFields = "0";
+            isContainer = "1";
+            Profile = "GuiTransparentProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "0 24";
+            Extent = "275 246";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "0";
+            tooltipprofile = "GuiDefaultProfile";
+            hovertime = "1000";
+            text = "Input";
+            maxLength = "1024";
+
+            new GuiScrollCtrl() {
+               canSaveDynamicFields = "0";
+               isContainer = "1";
+               Profile = "GuiScrollProfile";
+               HorizSizing = "width";
+               VertSizing = "height";
+               Position = "0 0";
+               Extent = "274 246";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               hovertime = "1000";
+               willFirstRespond = "1";
+               hScrollBar = "alwaysOff";
+               vScrollBar = "dynamic";
+               constantThumbHeight = "0";
+               childMargin = "0 0";
+
+               new GuiTextListCtrl(OptionsMenuInputList) {
+                  canSaveDynamicFields = "0";
+                  isContainer = "1";
+                  Profile = "GuiTextListProfile";
+                  HorizSizing = "right";
+                  VertSizing = "bottom";
+                  Position = "2 2";
+                  Extent = "270 2";
+                  MinExtent = "8 2";
+                  canSave = "1";
+                  Visible = "1";
+                  AltCommand = "OptionsMenuInputList.doRemap();";
+                  hovertime = "1000";
+                  enumerate = "0";
+                  resizeCell = "1";
+                  columns = "0 130";
+                  fitParentWidth = "1";
+                  clipColumnText = "0";
+               };
+            };
+         };
+         new GuiTabPageCtrl() {
+            canSaveDynamicFields = "0";
+            isContainer = "1";
+            Profile = "GuiTransparentProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "0 24";
+            Extent = "275 246";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "0";
+            tooltipprofile = "GuiDefaultProfile";
+            hovertime = "1000";
+            text = "Display";
+            maxLength = "1024";
+
+            new GuiTextCtrl() {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "GuiTextProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "10 50";
+               Extent = "120 20";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               hovertime = "1000";
+               text = "Display Driver:";
+               maxLength = "1024";
+            };
+            new GuiTextCtrl() {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "GuiTextProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "10 75";
+               Extent = "120 20";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               hovertime = "1000";
+               text = "Resolution:";
+               maxLength = "1024";
+            };
+            new GuiTextCtrl() {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "GuiTextProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "10 100";
+               Extent = "120 20";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               hovertime = "1000";
+               text = "Color Depth:";
+               maxLength = "1024";
+            };
+            new GuiTextCtrl() {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "GuiTextProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "10 10";
+               Extent = "120 20";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               hovertime = "1000";
+               text = "Display Mode:";
+               maxLength = "1024";
+            };
+            new GuiTextCtrl() {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "GuiTextProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "10 161";
+               Extent = "120 20";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               hovertime = "1000";
+               text = "Screenshot Format:";
+               maxLength = "1024";
+            };
+            new GuiPopUpMenuCtrl(OptionsMenuDisplayMode) {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "GuiPopUpMenuProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "150 10";
+               Extent = "120 18";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               hovertime = "1000";
+               text = "Windowed";
+               maxLength = "1024";
+               maxPopupHeight = "200";
+               sbUsesNAColor = "0";
+               reverseTextList = "0";
+               bitmapBounds = "16 16";
+            };
+            new GuiPopUpMenuCtrl(OptionsMenuDisplayDriver) {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "GuiPopUpMenuProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "150 50";
+               Extent = "120 18";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               hovertime = "1000";
+               text = "OpenGL";
+               maxLength = "1024";
+               maxPopupHeight = "200";
+               sbUsesNAColor = "0";
+               reverseTextList = "0";
+               bitmapBounds = "16 16";
+            };
+            new GuiPopUpMenuCtrl(OptionsMenuResolution) {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "GuiPopUpMenuProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "150 75";
+               Extent = "120 18";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               hovertime = "1000";
+               maxLength = "1024";
+               maxPopupHeight = "200";
+               sbUsesNAColor = "0";
+               reverseTextList = "0";
+               bitmapBounds = "16 16";
+            };
+            new GuiPopUpMenuCtrl(OptionsMenuColorDepth) {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "GuiPopUpMenuProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "150 100";
+               Extent = "120 18";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               hovertime = "1000";
+               text = "32";
+               maxLength = "1024";
+               maxPopupHeight = "200";
+               sbUsesNAColor = "0";
+               reverseTextList = "0";
+               bitmapBounds = "16 16";
+            };
+            new GuiPopUpMenuCtrl(OptionsMenuScreenshotFormat) {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "GuiPopUpMenuProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "150 161";
+               Extent = "120 18";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               hovertime = "1000";
+               text = "PNG";
+               maxLength = "1024";
+               maxPopupHeight = "200";
+               sbUsesNAColor = "0";
+               reverseTextList = "0";
+               bitmapBounds = "16 16";
+            };
+            new GuiButtonCtrl(OptionsMenuTestSettingsButton) {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "GuiButtonProfile";
+               HorizSizing = "center";
+               VertSizing = "top";
+               Position = "67 205";
+               Extent = "140 30";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               Command = "OptionsMenuTestSettingsButton.testSettings();";
+               hovertime = "1000";
+               text = "Test Settings";
+               groupNum = "-1";
+               buttonType = "PushButton";
+               useMouseEvents = "0";
+            };
+            new GuiCheckBoxCtrl(OptionsMenuVerticalSync) {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "GuiCheckBoxProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "130 125";
+               Extent = "140 30";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               hovertime = "1000";
+               text = "  Enable Vertical Sync";
+               groupNum = "-1";
+               buttonType = "ToggleButton";
+               useMouseEvents = "0";
+               useInactiveState = "0";
+            };
+         };
+         new GuiTabPageCtrl() {
+            canSaveDynamicFields = "0";
+            isContainer = "1";
+            Profile = "GuiTransparentProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "0 24";
+            Extent = "275 246";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            hovertime = "1000";
+            text = "Audio";
+            maxLength = "1024";
+
+            new GuiCheckBoxCtrl(OptionsMenuMasterEnabled) {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "GuiCheckBoxProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "10 10";
+               Extent = "140 20";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               Command = "OptionsMenuGui.testAudioSettings();";
+               hovertime = "1000";
+               text = "   Enable Audio";
+               groupNum = "-1";
+               buttonType = "ToggleButton";
+               useMouseEvents = "0";
+               useInactiveState = "0";
+            };
+            new GuiCheckBoxCtrl(OptionsMenuSFXEnabled) {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "GuiCheckBoxProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "10 60";
+               Extent = "140 20";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               Command = "OptionsMenuGui.testAudioSettings();";
+               hovertime = "1000";
+               text = "   Enable Sound Effects";
+               groupNum = "-1";
+               buttonType = "ToggleButton";
+               useMouseEvents = "0";
+               useInactiveState = "0";
+            };
+            new GuiCheckBoxCtrl(OptionsMenuMusicEnabled) {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "GuiCheckBoxProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "10 110";
+               Extent = "140 20";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               Command = "OptionsMenuGui.testAudioSettings();";
+               hovertime = "1000";
+               text = "   Enable Music";
+               groupNum = "-1";
+               buttonType = "ToggleButton";
+               useMouseEvents = "0";
+               useInactiveState = "0";
+            };
+            new GuiSliderCtrl(OptionsMenuMasterVolume) {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "MenuSliderProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "10 35";
+               Extent = "255 21";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               AltCommand = "OptionsMenuGui.testAudioSettings();";
+               hovertime = "1000";
+               range = "0.000 1.000";
+               ticks = "0";
+               value = "0";
+            };
+            new GuiSliderCtrl(OptionsMenuSFXVolume) {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "MenuSliderProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "10 85";
+               Extent = "255 21";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               AltCommand = "OptionsMenuGui.testAudioSettings();";
+               hovertime = "1000";
+               range = "0.000 1.000";
+               ticks = "0";
+               value = "0";
+            };
+            new GuiSliderCtrl(OptionsMenuMusicVolume) {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "MenuSliderProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "10 130";
+               Extent = "255 21";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               AltCommand = "OptionsMenuGui.testAudioSettings();";
+               hovertime = "1000";
+               range = "0.000 1.000";
+               ticks = "0";
+               value = "0";
+            };
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+//-----------------------------------------------------------------------------
+
+function OptionsMenuGui::onWake(%this)
+{
+	// Load the input map dialog
+	exec ("~/gui/InputMapDialog.gui");
+	
+	// New script object to handle any input changes
+	%this.InputMapChanges = new ScriptObject();
+	
+	// Load the input details
+	%this.loadInputList();
+	
+	// Load the display details
+	%this.loadDisplaySettings();
+	
+	// Load the audio details
+	%this.loadAudioSettings();
+	
+	OptionsMenuTabBook.selectPage(0);
+}
+
+//-----------------------------------------------------------------------------
+
+function OptionsMenuGui::loadDisplaySettings(%this)
+{
+	// Clear each menu
+	OptionsMenuDisplayMode.clear();
+	OptionsMenuDisplayDriver.clear();
+	OptionsMenuResolution.clear();
+	OptionsMenuColorDepth.clear();
+	OptionsMenuScreenshotFormat.clear();
+	
+	// Mode
+	OptionsMenuDisplayMode.add("Windowed",   0);
+	OptionsMenuDisplayMode.add("Fullscreen", 1);
+	OptionsMenuDisplayMode.setSelected(isFullScreen());
+	
+	//
+	%displayDeviceList = getDisplayDeviceList();
+	for (%i = 0; %i < getFieldCount(%displayDeviceList); %i++)
+		OptionsMenuDisplayDriver.add(getField(%displayDeviceList, %i), %i);
+	
+	// Display defaults
+	%displayDevice     = $Pref::Video::DisplayDevice;
+	%resolutionList    = getResolutionList(%displayDevice);
+	%fullScreen		   = isFullScreen();
+	%gameResolution    = getRes();
+	%vSync			   = _getPreference("VideoSettings::VerticalSync");
+	%desktopResolution = getDesktopResolution();
+	
+	for (%i = 0; %i < getFieldCount(%resolutionList); %i++)
+	{
+		%resString = getField(%resolutionList, %i);
+		
+		// Width and height
+		%resWidth  = getWord(%resString, 0);
+		%resHeight = getWord(%resString, 1);
+		
+		// Make sure the windowed resolution isn't greater than the desktop resolution
+		if (!%fullScreen)
+		{
+			if (%resWidth > getWord(%desktopResolution, 0))
+				continue;
+			
+			if (%resHeight >  getWord(%desktopResolution, 1))
+				continue;
+		}
+
+		// Handle the resolutions
+		if (OptionsMenuResolution.findText( %resWidth SPC "x" SPC %resHeight ) == -1)
+			OptionsMenuResolution.add(%resWidth SPC "x" SPC %resHeight, %i);
+		
+		// Handle the depth
+		%resDepth = getWord(%resString, 2);
+		if (OptionsMenuColorDepth.findText( %resDepth ) == -1)
+			OptionsMenuColorDepth.add(%resDepth, %i);
+	}
+	
+	// Screenshot format
+	OptionsMenuScreenshotFormat.add("PNG", 0);
+	OptionsMenuScreenshotFormat.add("JPG", 1);
+	
+	// Update the selection
+	OptionsMenuDisplayDriver.updateSelected( %displayDevice );
+	OptionsMenuResolution.updateSelected( getWord(%gameResolution, 0) SPC "x" SPC getWord(%gameResolution, 1) );
+	OptionsMenuColorDepth.updateSelected( getWord(%gameResolution, 2) );
+	OptionsMenuVerticalSync.setStateOn(%vSync);
+	OptionsMenuScreenshotFormat.updateSelected( $Pref::Video::ScreenShotFormat );
+}
+
+function GuiPopUpMenuCtrl::updateSelected(%this, %text)
+{
+	%this.setSelected(%this.findText(%text));
+}
+
+function OptionsMenuGui::loadAudioSettings(%this)
+{
+	%masterEnabled 	= _getPreference( "AudioSettings::MasterEnabled" );
+	%masterVolume  	= _getPreference( "AudioSettings::MasterVolume" );
+	
+	%sfxEnabled 	= _getPreference( "AudioSettings::SFXEnabled" );
+	%sfxVolume  	= _getPreference( "AudioSettings::SFXVolume" );
+	
+	%musicEnabled 	= _getPreference( "AudioSettings::MusicEnabled" );
+	%musicVolume  	= _getPreference( "AudioSettings::MusicVolume" );
+	
+	OptionsMenuMasterEnabled.setValue(%masterEnabled);
+	OptionsMenuMasterVolume.setValue(%masterVolume);
+	OptionsMenuSFXEnabled.setValue(%sfxEnabled);
+	OptionsMenuSFXVolume.setValue(%sfxVolume);
+	OptionsMenuMusicEnabled.setValue(%musicEnabled);
+	OptionsMenuMusicVolume.setValue(%musicVolume);
+}
+
+//-----------------------------------------------------------------------------
+
+function OptionsMenuGui::loadInputList(%this)
+{
+	// Clear the list
+	%listControl = OptionsMenuInputList;
+	%listControl.clear();
+	
+	for (%i = 0; %i < $InputMap::Count; %i++)
+	{
+		%className = $InputMap::Type[%i];
+		
+		// Add label
+		if (%className $= "Title")
+			%listControl.addRow(0, $InputMap::Text[%i]);
+
+		// Add separator
+		if (%className $= "Separator")
+			%listControl.addRow(0, "------------------------------------------------------------------");
+
+		// Add a gap
+		if (%className $= "Space")
+			%listControl.addRow(0, "");
+
+		// Add an input command
+		if (%className $= "InputCommand")
+		{
+			// Find the command
+			%command = $InputMap::Command[%i];
+			
+			// Read the label and find the current preference setting
+			%label = $InputMap::Label[%i];
+			%value = _getPreference("InputMap::" @ %command);
+			if (%this.InputMapChanges.getFieldValue(%command) !$= "")
+				%value = %this.InputMapChanges.getFieldValue(%command);
+
+			// Add it to the list
+			%listControl.addRow(0, %label TAB strupr(getWord(%value, 1)));
+		}
+	}
+}
+
+function OptionsMenuInputList::doRemap(%this, %device, %action)
+{
+	// Find the selected input
+	%command = %this.getSelectedCommand();
+	
+	// Quit if it isn't a command
+	if (%command $= NULL)
+		return;
+	
+	// Load the input dialog if we dont have a device or action
+	if (%device $= "" || %action $= "")
+	{
+		Canvas.pushDialog(OptionsMenuInputMapGui);
+		return;
+	}
+	
+	// Save the preference and reload the list
+	//_setPreference("InputMap::" @ %command, %device SPC %action);
+	OptionsMenuGui.InputMapChanges.setFieldValue(%command, %device SPC %action);
+	OptionsMenuGui.loadInputList();
+}
+
+function OptionsMenuInputList::getSelectedCommand(%this)
+{
+	// Find the selected input
+	%index = %this.getSelectedRow();
+	%label = getField(%this.getRowText(%index), 0);
+
+	// Find the command
+	for (%i = 0; %i < _getPreferenceCount( "InputLabel" ); %i++)
+	{
+		%prefField = _getPreferenceName( "InputLabel", %i );
+		if (%label $= _getPreference("InputLabel::" @ %prefField))
+			return %prefField; 
+	}
+	
+	return NULL;
+}
+
+function OptionsMenuInputMapControl::onInputEvent(%this, %device, %action)
+{
+	// Close dialog
+	Canvas.popDialog(OptionsMenuInputMapGui);
+	
+	// Quit if asked to
+	if (%device $= "keyboard" && %action $= "escape")
+		return;
+   
+	// Find the selected input
+	%currCommand = OptionsMenuInputList.getSelectedCommand();
+	
+	// Check to see if the device and action have already been bound
+	%alreadyBound = false;
+	for (%i = 0; %i < _getPreferenceCount("InputMap"); %i++)
+	{
+		%preferenceField = _getPreferenceName("InputMap", %i);
+
+		if (%currCommand $= %preferenceField)
+			continue;
+		
+		if (_getPreference("InputMap::" @ %preferenceField) $= strupr(%device SPC %action))
+		{
+			%alreadyBound    = true;
+			%originalCommand = %preferenceField;
+		}
+	}
+	
+	if (%alreadyBound)
+	{
+		%yesCallback = "_setPreference(\"InputMap::" @ %originalCommand @ "\", \"\"); OptionsMenuInputList.doRemap(" @ %device @ ", " @ %action @ ");";
+		//%noCallback  = "Canvas.pushDialog(OptionsMenuInputMapGui);";
+		%noCallback  = "";
+		MessageBoxYesNo("Warning", "The selected input is already bound. \n\nWould you like to override the previous input?", %yesCallback, %noCallback);
+		
+		return;
+	}
+	
+	// Map the input
+	OptionsMenuInputList.doRemap(%device, %action);
+}
+
+//-----------------------------------------------------------------------------
+
+function OptionsMenuTestSettingsButton::testSettings(%this)
+{
+	// Get the display settings
+	%mode   = (OptionsMenuDisplayMode.getText() $= "Fullscreen");
+	%driver = OptionsMenuDisplayDriver.getText();
+	
+	%resolution = removeWord(OptionsMenuResolution.getText(), 1);
+	%depth      = OptionsMenuColorDepth.getText();
+	%vSync      = OptionsMenuVerticalSync.getValue();
+	
+	%screenshot = OptionsMenuScreenshotFormat.getText();
+	
+	// Apply the settings
+	_applyVideoSettings(%mode, %driver, %resolution, %depth, %vSync, %screenshot);
+}
+
+//-----------------------------------------------------------------------------
+
+function OptionsMenuGui::testAudioSettings(%this)
+{
+	%masterEnabled = OptionsMenuMasterEnabled.getValue();
+	%masterVolume  = OptionsMenuMasterVolume.getValue();
+	
+	%sfxEnabled = OptionsMenuSFXEnabled.getValue();
+	%sfxVolume  = OptionsMenuSFXVolume.getValue();
+	
+	%musicEnabled = OptionsMenuMusicEnabled.getValue();
+	%musicVolume  = OptionsMenuMusicVolume.getValue();
+	
+	// Apply the settings
+	_applyAudioSettings(%masterEnabled, %masterVolume, %sfxEnabled, %sfxVolume, %musicEnabled, %musicVolume);
+}
+
+//-----------------------------------------------------------------------------
+
+function OptionsMenuGui::cancelChanges(%this)
+{
+	// Apply saved settings
+	_applyPreferenceVideoSettings();
+	_applyPreferenceAudioSettings();
+	
+	// Close the dialog
+	Canvas.popDialog(%this);
+	
+	// Delete the script object
+	%this.InputMapChanges.delete();
+}
+
+function OptionsMenuGui::saveSettings(%this)
+{
+	// Find and apply the changes to the input
+	for (%i = 0; %i < %this.InputMapChanges.getDynamicFieldCount(); %i++)
+	{
+		%fieldName  = %this.InputMapChanges.getDynamicField(%i);
+		%fieldValue = %this.InputMapChanges.getFieldValue(%fieldName);
+		
+		_setPreference("InputMap::" @ %fieldName, %fieldValue);
+	}
+	
+	// Get the display settings
+	%mode   = (OptionsMenuDisplayMode.getText() $= "Fullscreen");
+	%driver = OptionsMenuDisplayDriver.getText();
+	
+	%resolution = removeWord(OptionsMenuResolution.getText(), 1);
+	%depth      = OptionsMenuColorDepth.getText();
+	%vSync      = OptionsMenuVerticalSync.getValue();
+	
+	%screenshot = OptionsMenuScreenshotFormat.getText();
+	
+	// Save and apply the preferences
+	_setVideoPreferences(%mode, %driver, %resolution, %depth, %vSync, %screenshot);
+	_applyVideoSettings(%mode, %driver, %resolution, %depth, %vSync, %screenshot);
+	
+	// Get the audio settings
+	_setAudioPreferences(OptionsMenuMasterEnabled.getValue(), OptionsMenuMasterVolume.getValue(),
+						 OptionsMenuSFXEnabled.getValue(), OptionsMenuSFXVolume.getValue(),
+						 OptionsMenuMusicEnabled.getValue(), OptionsMenuMusicVolume.getValue());
+	_applyPreferenceAudioSettings();
+	
+	// Save and close
+	_saveOptionsPreferences();
+	Canvas.popDialog(%this);
+	
+	// Delete the script object
+	%this.InputMapChanges.delete();
+}
+
+//-----------------------------------------------------------------------------

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<MenuConfiguration>
+	<InputMap>
+		<Title>Movement Commands</Title>
+		<Separator></Separator>
+		<InputCommand>
+			<Label>Move Up</Label>
+			<Command>MoveUp</Command>
+			<Value>KEYBOARD UP</Value>
+		</InputCommand>
+		<InputCommand>
+			<Label>Move Down</Label>
+			<Command>MoveDown</Command>
+			<Value>KEYBOARD DOWN</Value>
+		</InputCommand>
+		<InputCommand>
+			<Label>Move Left</Label>
+			<Command>MoveLeft</Command>
+			<Value>KEYBOARD LEFT</Value>
+		</InputCommand>
+		<InputCommand>
+			<Label>Move Right</Label>
+			<Command>MoveRight</Command>
+			<Value>KEYBOARD RIGHT</Value>
+		</InputCommand>
+		<Space></Space>
+		<InputCommand>
+			<Label>Jump</Label>
+			<Command>Jump</Command>
+			<Value>KEYBOARD SPACE</Value>
+		</InputCommand>
+	</InputMap>
+	<VideoSettings>
+		<Mode>0</Mode>
+		<Driver>OpenGL</Driver>
+		<Resolution>800 600</Resolution>
+		<Depth>32</Depth>
+		<VerticalSync>1</VerticalSync>
+		<Screenshot>PNG</Screenshot>
+	</VideoSettings>
+	<AudioSettings>
+		<MasterEnabled>1</MasterEnabled>
+		<MasterVolume>1</MasterVolume>
+		<SFXEnabled>1</SFXEnabled>
+		<SFXVolume>1</SFXVolume>
+		<MusicEnabled>1</MusicEnabled>
+		<MusicVolume>1</MusicVolume>
+	</AudioSettings>
+</MenuConfiguration>

@@ -1,0 +1,555 @@
+//--- OBJECT WRITE BEGIN ---
+%guiContent = new GuiControl(NetworkLobbyGui) {
+   canSaveDynamicFields = "0";
+   isContainer = "1";
+   Profile = "GuiDefaultProfile";
+   HorizSizing = "right";
+   VertSizing = "bottom";
+   Position = "0 0";
+   Extent = "800 600";
+   MinExtent = "8 2";
+   canSave = "1";
+   Visible = "1";
+   hovertime = "1000";
+
+   new GuiWindowCtrl() {
+      canSaveDynamicFields = "0";
+      isContainer = "1";
+      Profile = "MenuWindowProfile";
+      HorizSizing = "center";
+      VertSizing = "center";
+      Position = "80 116";
+      Extent = "640 368";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      tooltipprofile = "GuiDefaultProfile";
+      hovertime = "1000";
+      text = "New Network Game";
+      maxLength = "1024";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "0";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "NetworkLobbyGui.closeLobby();";
+
+      new GuiControl() {
+         canSaveDynamicFields = "0";
+         isContainer = "1";
+         Profile = "GuiTransparentProfile";
+         HorizSizing = "right";
+         VertSizing = "bottom";
+         Position = "8 31";
+         Extent = "400 128";
+         MinExtent = "8 2";
+         canSave = "1";
+         Visible = "1";
+         hovertime = "1000";
+
+         new GuiBitmapCtrl(NetworkLobbyLevelImage) {
+            canSaveDynamicFields = "0";
+            isContainer = "0";
+            Profile = "GuiDefaultProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "9 9";
+            Extent = "110 110";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            hovertime = "1000";
+            wrap = "0";
+         };
+         new GuiButtonCtrl(NetworkLobbySelectLevelButton) {
+            canSaveDynamicFields = "0";
+            isContainer = "0";
+            Profile = "GuiButtonProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "127 89";
+            Extent = "128 30";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            Command = "Canvas.pushDialog(SelectLevelGui);";
+            hovertime = "1000";
+            text = "Select Level";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            useMouseEvents = "0";
+         };
+         new GuiButtonCtrl(NetworkLobbyGameOptionsButton) {
+            canSaveDynamicFields = "0";
+            isContainer = "0";
+            Profile = "GuiButtonProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "264 89";
+            Extent = "128 30";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            hovertime = "1000";
+            text = "Game Options";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            useMouseEvents = "0";
+         };
+         new GuiTextCtrl() {
+            canSaveDynamicFields = "0";
+            isContainer = "0";
+            Profile = "GuiTextProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "127 8";
+            Extent = "96 18";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            hovertime = "1000";
+            text = "Level Name:";
+            maxLength = "1024";
+         };
+         new GuiTextCtrl() {
+            canSaveDynamicFields = "0";
+            isContainer = "0";
+            Profile = "GuiTextProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "127 26";
+            Extent = "96 18";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            hovertime = "1000";
+            text = "Level Type:";
+            maxLength = "1024";
+         };
+         new GuiTextCtrl() {
+            canSaveDynamicFields = "0";
+            isContainer = "0";
+            Profile = "GuiTextProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "127 44";
+            Extent = "96 18";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            hovertime = "1000";
+            text = "Players:";
+            maxLength = "1024";
+         };
+         new GuiTextCtrl() {
+            canSaveDynamicFields = "0";
+            isContainer = "0";
+            Profile = "GuiTextProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "127 62";
+            Extent = "96 18";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            hovertime = "1000";
+            text = "Game Options:";
+            maxLength = "1024";
+         };
+         new GuiTextCtrl(NetworkLobbyLevelNameLabel) {
+            canSaveDynamicFields = "0";
+            isContainer = "0";
+            Profile = "GuiTextProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "239 8";
+            Extent = "96 18";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            hovertime = "1000";
+            maxLength = "1024";
+         };
+         new GuiTextCtrl(NetworkLobbyLevelTypeLabel) {
+            canSaveDynamicFields = "0";
+            isContainer = "0";
+            Profile = "GuiTextProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "239 26";
+            Extent = "96 18";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            hovertime = "1000";
+            maxLength = "1024";
+         };
+         new GuiTextCtrl(NetworkLobbyPlayersLabel) {
+            canSaveDynamicFields = "0";
+            isContainer = "0";
+            Profile = "GuiTextProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "239 44";
+            Extent = "96 18";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            hovertime = "1000";
+            maxLength = "1024";
+         };
+         new GuiTextCtrl(NetworkLobbyGameOptionsLabel) {
+            canSaveDynamicFields = "0";
+            isContainer = "0";
+            Profile = "GuiTextProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "239 62";
+            Extent = "96 18";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            hovertime = "1000";
+            text = "None";
+            maxLength = "1024";
+         };
+      };
+      new GuiControl() {
+         canSaveDynamicFields = "0";
+         isContainer = "1";
+         Profile = "GuiTransparentProfile";
+         HorizSizing = "right";
+         VertSizing = "bottom";
+         Position = "412 31";
+         Extent = "220 128";
+         MinExtent = "8 2";
+         canSave = "1";
+         Visible = "1";
+         hovertime = "1000";
+
+         new GuiScrollCtrl() {
+            canSaveDynamicFields = "0";
+            isContainer = "1";
+            Profile = "GuiScrollProfile";
+            HorizSizing = "width";
+            VertSizing = "height";
+            Position = "9 9";
+            Extent = "202 110";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            tooltipprofile = "GuiDefaultProfile";
+            hovertime = "1000";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "dynamic";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+
+            new GuiListBoxCtrl(NetworkLobbyPlayerList) {
+               canSaveDynamicFields = "0";
+               isContainer = "0";
+               Profile = "GuiListBoxProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "2 2";
+               Extent = "198 2";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               hovertime = "1000";
+               AllowMultipleSelections = "0";
+               fitParentWidth = "1";
+            };
+         };
+      };
+      new GuiControl() {
+         canSaveDynamicFields = "0";
+         isContainer = "1";
+         Profile = "GuiTransparentProfile";
+         HorizSizing = "right";
+         VertSizing = "bottom";
+         Position = "8 153";
+         Extent = "625 134";
+         MinExtent = "8 2";
+         canSave = "1";
+         Visible = "1";
+         tooltipprofile = "GuiDefaultProfile";
+         hovertime = "1000";
+
+         new GuiScrollCtrl() {
+            canSaveDynamicFields = "0";
+            isContainer = "1";
+            Profile = "GuiScrollProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "9 9";
+            Extent = "606 117";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            hovertime = "1000";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "dynamic";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+
+            new GuiTextListCtrl(NetworkLobbyChatDisplay) {
+               canSaveDynamicFields = "0";
+               isContainer = "1";
+               Profile = "GuiTextListProfile";
+               HorizSizing = "right";
+               VertSizing = "bottom";
+               Position = "2 2";
+               Extent = "602 2";
+               MinExtent = "8 2";
+               canSave = "1";
+               Visible = "1";
+               hovertime = "1000";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+            };
+         };
+      };
+      new GuiControl() {
+         canSaveDynamicFields = "0";
+         isContainer = "1";
+         Profile = "GuiTransparentProfile";
+         HorizSizing = "right";
+         VertSizing = "bottom";
+         Position = "8 282";
+         Extent = "624 36";
+         MinExtent = "8 2";
+         canSave = "1";
+         Visible = "1";
+         hovertime = "1000";
+
+         new GuiTextEditCtrl(NetworkLobbyChatInput) {
+            canSaveDynamicFields = "0";
+            isContainer = "0";
+            Profile = "GuiTextEditProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "9 9";
+            Extent = "505 18";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            AltCommand = "NetworkLobbyGui.addChatText();";
+            hovertime = "1000";
+            maxLength = "64";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "1";
+            password = "0";
+            passwordMask = "*";
+         };
+         new GuiButtonCtrl() {
+            canSaveDynamicFields = "0";
+            isContainer = "0";
+            Profile = "GuiButtonProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "519 9";
+            Extent = "96 18";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            Command = "NetworkLobbyGui.addChatText();";
+            hovertime = "1000";
+            text = "Send";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            useMouseEvents = "0";
+         };
+      };
+      new GuiControl() {
+         canSaveDynamicFields = "0";
+         isContainer = "1";
+         Profile = "GuiTransparentProfile";
+         HorizSizing = "right";
+         VertSizing = "bottom";
+         Position = "8 313";
+         Extent = "624 47";
+         MinExtent = "8 2";
+         canSave = "1";
+         Visible = "1";
+         hovertime = "1000";
+
+         new GuiButtonCtrl(NetworkLobbyStartGameButton) {
+            canSaveDynamicFields = "0";
+            isContainer = "0";
+            Profile = "GuiButtonProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "354 8";
+            Extent = "128 30";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            Command = "NetworkLobbyGui.startGame();";
+            hovertime = "1000";
+            text = "Start Game!";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            useMouseEvents = "0";
+         };
+         new GuiButtonCtrl() {
+            canSaveDynamicFields = "0";
+            isContainer = "0";
+            Profile = "GuiButtonProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            Position = "487 8";
+            Extent = "128 30";
+            MinExtent = "8 2";
+            canSave = "1";
+            Visible = "1";
+            Command = "NetworkLobbyGui.closeLobby();";
+            hovertime = "1000";
+            text = "Close Lobby";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            useMouseEvents = "0";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function NetworkLobbyGui::onWake(%this)
+{
+	// Load additional dialogs
+	exec("~/gui/SelectLevelGui.gui");
+	
+	// Only give control to the server
+	if (!getIsServer())
+	{
+		NetworkLobbySelectLevelButton.setActive(0);
+		NetworkLobbyGameOptionsButton.setActive(0);
+	}
+	
+	//
+	NetworkLobbyChatDisplay.setActive(0);
+	
+	// Grab the level folder
+	%levelDirectory = _getPreference("LevelFolder");
+	addResPath(%levelDirectory);
+	
+	// Find the first level with a config file
+	%levelSpec = %levelDirectory @ "/*.t2d";
+	for (%levelFile = findFirstFile(%levelSpec); isFile(%levelFile); %levelFile = findNextFile(%levelSpec))
+	{
+		%fileName   = fileBase(%levelFile);
+		%configFile = %levelDirectory @ "/" @ %fileName @ ".xml";
+		if (isFile(%configFile))
+			break;
+	}
+	
+	// Announce that the level has been changed
+	commandToServer('NetworkLobbyLevelChange', fileBase(%levelFile));
+}
+
+function NetworkLobbyGui::loadLevelConfiguration(%this, %levelFilename)
+{
+	// Find the xml configuration file
+	%levelDirectory = _getPreference("LevelFolder");
+	%configFile     = %levelDirectory @ "/" @ %levelFilename @ ".xml";
+	
+	%xmlFile = new ScriptObject()
+	{
+		class = "XML";
+	};
+	
+	// Read the file
+	if( %xmlFile.beginRead( %configFile ) )
+	{
+		// Load the configuration
+		if( %xmlFile.readClassBegin( "LevelConfiguration" ) )
+		{
+			%levelImage   = %xmlFile.readField( "Image" );
+			
+			%levelName    = %xmlFile.readField( "Name" );
+			%levelType    = %xmlFile.readField( "Type" );
+			%minPlayers   = %xmlFile.readField( "MinPlayers" );
+			%maxPlayers   = %xmlFile.readField( "MaxPlayers" );
+			%levelPlayers = %minPlayers @ "-" @ %maxPlayers;
+			
+			%xmlFile.readClassEnd();
+		}
+		
+		// Close off the stream
+		%xmlFile.endRead();
+	}
+	
+	// Apply the settings
+	NetworkLobbyLevelImage.setBitmap(%levelImage);
+	NetworkLobbyLevelNameLabel.setText(%levelName);
+	NetworkLobbyLevelTypeLabel.setText(%levelType);
+	NetworkLobbyPlayersLabel.setText(%levelPlayers);
+	
+	$NetworkLobby::LevelName = %levelName;
+	$NetworkLobby::LevelFile = %levelDirectory @ "/" @ %levelFilename @ ".t2d";
+	$NetworkLobby::Players   = %minPlayers SPC %maxPlayers;
+}
+
+function NetworkLobbyGui::addChatText(%this)
+{
+	// Don't send blank strings
+	if (NetworkLobbyChatInput.getText() $= "")
+		return;
+	
+	// Tell the server we're chatting, then clear the text box
+	commandToServer('NetworkLobbyAddChatText', NetworkLobbyChatInput.getText());
+	NetworkLobbyChatInput.setText("");
+}
+
+function NetworkLobbyGui::startGame()
+{
+	commandToServer('NetworkLobbyStartGame');
+	NetworkLobbyStartGameButton.setActive(0);
+}
+
+function NetworkLobbyChatDisplay::gameCountdown(%this, %timeRemaining)
+{
+	// Add the text
+	%this.addRow(1, "Game starting in: " @ %timeRemaining @ " seconds...", 0);
+	
+	// Complete the countdown
+	if (%timeRemaining == 0)
+	{
+		NetworkLobbyCountDownComplete();
+		return;
+	}
+	
+	// Schedule the next tick
+	$CountdownSchedule = %this.schedule(1000, "gameCountdown", %timeRemaining - 1);
+}
+
+function NetworkLobbyGui::closeLobby()
+{
+	// Close the lobby
+	Canvas.popDialog(NetworkLobbyGui);
+	
+	// Cancel the countdown
+	if (isEventPending($CountdownSchedule))
+		cancel($CountdownSchedule);
+	
+	// Shutdown the server if we created it
+	if (getIsServer())
+	{
+		// Destroy server
+		destroyServer();
+		return;
+	}
+	
+	// Disconnect from the server
+	disconnect();
+}

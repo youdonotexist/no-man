@@ -1,0 +1,273 @@
+//-------------------------- 4/25/2010 -- 20:24:38 -----
+System & Processor Information:
+   MacOS version: 10.6.3
+   CarbonLib version: 1.6.0
+   Physical RAM: 2047MB
+   Logical RAM: 2047MB
+Unknown Getstalt value for processor type: 0x69353836
+platform layer should be changed to use sysctl() instead of Gestalt() .
+   Unknown Processor, assuming x86 Compatible, 2147 Mhz
+   FPU detected
+ 
+Math Init:
+   Installing Standard C extensions
+ 
+Input Init:
+
+Video Init:
+  active displays = 0x8630bc  CGDisplayID = 0x4271e40
+  active displays = 0x8630d4  CGDisplayID = 0x2b284551
+  active displays = 0x8630ec  CGDisplayID = 0x1cab6ed7
+using display 0x8630bc
+   Accelerated OpenGL display device detected.
+
+Initializing chunk mappings...
+   o 'TEXT' maps to TextChunk
+   o 'SCHK' maps to UnknownChunk
+   o 'SCHK' maps to SimChunk
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/main.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/main.cs.
+ % - Initializing Common
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/preferences/defaultPrefs.cs.
+common/preferences/defaultPrefs.cs (84): Unable to find function initDisplayDeviceInfo
+
+Using OpenGL rendering. Fullscreen: 0
+
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gameScripts/xml.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gameScripts/properties.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gameScripts/common.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gameScripts/audio.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gameScripts/canvas.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gameScripts/cursor.cs.
+Activating the OpenGL display device...
+ OpenGLDevice activating...
+OpenGL driver information:
+  Vendor: NVIDIA Corporation
+  Renderer: NVIDIA GeForce 8600M GT OpenGL Engine
+  Version: 2.1 NVIDIA-1.6.10
+OpenGL Init: Enabled Extensions
+  ARB_multitexture (Max Texture Units: 8)
+  EXT_blend_color
+  EXT_blend_minmax
+  EXT_compiled_vertex_array
+  EXT_texture_env_combine
+  EXT_packed_pixels
+  EXT_fog_coord
+  ARB_texture_compression
+  EXT_texture_compression_s3tc
+  (ARB|EXT)_texture_env_add
+  EXT_texture_filter_anisotropic (Max anisotropy: 16.000000)
+  Vertical Sync
+  ATI_FSAA
+OpenGL Init: Disabled Extensions
+  EXT_paletted_texture
+  NV_vertex_array_range
+  3DFX_texture_compression_FXT1
+
+ set screen mode 800 x 600 x 32, windowed, force it, dont repaint
+Cleaning up the display device...
+Killing the texture manager...
+Clearing the current AGL context...
+Clearing the current drawable...
+Deleting the rendering context...
+>> Attempting to change display settings to windowed 800x600x32...
+using display 0x8630bc
+Set up AGL windowed support
+Cleared gl buffers
+>>Number of FSAA samples is now [1].
+Resurrecting the texture manager...
+Max Texture Size reported as: 8192
+ set screen mode 1440 x 900 x 32, windowed, dont force it, repaint
+Cleaning up the display device...
+Killing the texture manager...
+Clearing the current AGL context...
+Clearing the current drawable...
+Deleting the rendering context...
+Destroying the window...
+>> Attempting to change display settings to windowed 1440x900x32...
+using display 0x8630bc
+Set up AGL windowed support
+Cleared gl buffers
+>>Number of FSAA samples is now [1].
+Resurrecting the texture manager...
+OpenAL Driver Init:
+   Vendor: Any
+   Version: OpenAL 1.2
+   Renderer: Software
+   Extensions: 
+
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/profiles.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/cursors.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/messageBoxOk.gui.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/messageBoxYesNo.gui.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/messageBoxYesNoCancel.gui.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/messageBoxOKCancel.gui.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/messageBoxOKCancelDetailsDlg.gui.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/messagePopup.gui.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/options.gui.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/remap.gui.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/console.gui.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/NetworkMenu.gui.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/startServer.gui.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/joinServer.gui.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/waitingForServer.gui.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/helpDlg.gui.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/messageBox.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/help.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gui/chatGui.gui.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gameScripts/screenshot.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gameScripts/metrics.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/Gui/FrameOverlayGui.gui.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gameScripts/scriptDoc.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gameScripts/keybindings.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gameScripts/options.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gameScripts/levelManagement.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gameScripts/projectManagement.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gameScripts/projectResources.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/common/gameScripts/align.cs.
+
+Torque Game Builder (v1.7.4) initialized...
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/resources/PlatformerArt/resourceDatabase.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/resources/PlatformerArt/AudioData.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/resources/PlatformerArt/SadData.cs.
+ % Game Resources : Loaded Resource PlatformerArt
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/managed/datablocks.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/managed/persistent.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/managed/brushes.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/datablocks.cs.
+Compiling /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/TrampolineBehavior.cs...
+creating path /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/TrampolineBehavior.cs.dso
+Compiling /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/SpawnPointBehavior.cs...
+creating path /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/SpawnPointBehavior.cs.dso
+Compiling /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/PlatformBehavior.cs...
+creating path /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/PlatformBehavior.cs.dso
+Compiling /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/PickupBehavior.cs...
+creating path /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/PickupBehavior.cs.dso
+Compiling /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/PepperPickupBehavior.cs...
+creating path /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/PepperPickupBehavior.cs.dso
+Compiling /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/ParallaxBehavior.cs...
+creating path /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/ParallaxBehavior.cs.dso
+Compiling /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/MusicTriggerBehavior.cs...
+creating path /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/MusicTriggerBehavior.cs.dso
+Compiling /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/LevelCompleteBehavior.cs...
+creating path /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/LevelCompleteBehavior.cs.dso
+Compiling /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/LadderBehavior.cs...
+creating path /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/LadderBehavior.cs.dso
+Compiling /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/FallingPlatformBehavior.cs...
+creating path /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/FallingPlatformBehavior.cs.dso
+Compiling /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/EnemyTurnBehavior.cs...
+creating path /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/EnemyTurnBehavior.cs.dso
+Compiling /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/ControllerBehavior.cs...
+creating path /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/ControllerBehavior.cs.dso
+Compiling /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/CheckPointPickupBehavior.cs...
+creating path /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/CheckPointPickupBehavior.cs.dso
+Compiling /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/AreaDamageBehavior.cs...
+creating path /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/AreaDamageBehavior.cs.dso
+Compiling /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/AIControllerBehavior.cs...
+creating path /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/AIControllerBehavior.cs.dso
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/TrampolineBehavior.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/SpawnPointBehavior.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/PlatformBehavior.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/PickupBehavior.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/PepperPickupBehavior.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/ParallaxBehavior.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/MusicTriggerBehavior.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/LevelCompleteBehavior.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/LadderBehavior.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/FallingPlatformBehavior.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/EnemyTurnBehavior.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/ControllerBehavior.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/CheckPointPickupBehavior.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/AreaDamageBehavior.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/behaviors/AIControllerBehavior.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/guiProfiles.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gui/mainScreen.gui.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/game.cs.
+game/gameScripts/game.cs (20): Unable to find function enableJoystick
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/GameMethods.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/ObjectManager.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/SoundManager.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/ParallaxMethods.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/ActionScripts.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/Weapons/WeaponData.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/Weapons/ProjectileMethods.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/Weapons/FireBallLauncher.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/Weapons/BoneLauncher.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/Weapons/BulletWeapon.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/Weapons/RocketLauncher.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/ActorMethods.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/BoomBotMethods.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/PlayerMethods.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/DrillMethods.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/FirstPuzzle.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/SecondPuzzle.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/ThirdPuzzle.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/BoatPuzzle.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/MenuSystem/MainMenu.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gui/MainMenu.gui.
+Could not locate texture: game/game/data/images/bridge
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/MenuSystem/MenuSystem.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/MenuSystem/PreferenceMethods.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gameScripts/MenuSystem/OptionsMenu.cs.
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/gui/OptionsMenu.gui.
+Could not locate texture: game/game/data/images/bridge
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/data/levels/demoMenu.t2d.
+t2dStaticSprite::setImageMap() - t2dImageMapDatablock Datablock is invalid! (elevator_gearImageMap)
+t2dStaticSprite::setFrame() - Cannot set Frame without existing t2dImageMapDatablock Datablock!
+Activating the OpenGL display device...
+ OpenGLDevice activating...
+OpenGL driver information:
+  Vendor: NVIDIA Corporation
+  Renderer: NVIDIA GeForce 8600M GT OpenGL Engine
+  Version: 2.1 NVIDIA-1.6.10
+OpenGL Init: Enabled Extensions
+  ARB_multitexture (Max Texture Units: 8)
+  EXT_blend_color
+  EXT_blend_minmax
+  EXT_compiled_vertex_array
+  EXT_texture_env_combine
+  EXT_packed_pixels
+  EXT_fog_coord
+  ARB_texture_compression
+  EXT_texture_compression_s3tc
+  (ARB|EXT)_texture_env_add
+  EXT_texture_filter_anisotropic (Max anisotropy: 16.000000)
+  Vertical Sync
+  ATI_FSAA
+OpenGL Init: Disabled Extensions
+  EXT_paletted_texture
+  NV_vertex_array_range
+  3DFX_texture_compression_FXT1
+
+ set screen mode 800 x 600 x 32, windowed, force it, dont repaint
+Cleaning up the display device...
+Killing the texture manager...
+Clearing the current AGL context...
+Clearing the current drawable...
+Deleting the rendering context...
+Destroying the window...
+>> Attempting to change display settings to windowed 800x600x32...
+using display 0x8630bc
+Set up AGL windowed support
+Cleared gl buffers
+>>Number of FSAA samples is now [1].
+Resurrecting the texture manager...
+Max Texture Size reported as: 8192
+Compiling /Applications/TorqueGameBuilder/games/No_Man/game/data/levels/demoLevel.t2d...
+creating path /Applications/TorqueGameBuilder/games/No_Man/game/data/levels/demoLevel.t2d.dso
+Loading compiled script /Applications/TorqueGameBuilder/games/No_Man/game/data/levels/demoLevel.t2d.
+On level loaded..
+rock had something enter 
+turning off learnword collisions
+DropRock enetered
+DropRock enetered
+DropRock enetered
+==>quit();
+creating path /Users/mike/Library/Application Support/Commonwealth Studios/No^Man/common/commonConfig.xml
+Shutting down the OpenGL display device...
+Cleaning up the display device...
+Killing the texture manager...
+Clearing the current AGL context...
+Clearing the current drawable...
+Deleting the rendering context...
+Destroying the window...
